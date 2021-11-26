@@ -69,11 +69,11 @@ def calculate(input):
             print('square root of a negative number is not defined')
 
 
-    string = input[:len(input)-1] if input[-1] == '.' else input
+    input = input[:len(input)-1] if input[-1] == '.' else input
 
-    string = string.replace(',','')
+    input = input.replace(',','').replace('plus','+')
 
-    text0 = (string.lower()).split()
+    text0 = (input.lower()).split()
 
     values = []
 
