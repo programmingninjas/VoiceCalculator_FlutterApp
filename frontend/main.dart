@@ -93,6 +93,9 @@ class _MyAppState extends State<MyApp> {
                     }
                     showAlertDialog(context, response.body);
                   }
+                  if (text.contains('+')){
+                  text = text.replaceALL('+','plus');
+                  }
                   sendText("http://10.0.2.2:5000/api?text=" + text);
                 },
                 child: const Text("Calculate"),
